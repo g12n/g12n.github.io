@@ -1,0 +1,11 @@
+---
+layout: main.njk
+---
+<main>
+{{ content | safe }}
+<address class="author">
+    <p class="name">{{author.name}}</p>
+    <p class="same-as"><a href="{{author.sameAs}}"/>{{author.sameAs}}</a></p>
+    <img class="author-image" src="{{author.image}}" alt="Photo of {{author.name}}"/>
+</address>
+</main>
