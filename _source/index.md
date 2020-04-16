@@ -1,6 +1,6 @@
 ---
 layout: homepage.njk
-pageTitle: G12N – Gehrmann Design
+pageTitle: G12N – Gehrmann Design 2020
 ---
 # G12N 
 
