@@ -1,15 +1,17 @@
-name: Deploy to GitHub Pages
+name: Deploy to from Source Master
 on:
   push:	
     branches:	
-      - master
+      - source
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Checkout and Build
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
+      with:
+        ref: 'source'
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -19,10 +21,10 @@ jobs:
         npm install
         npx @11ty/eleventy
 
-    - name: Deploy
+    - name: Deploy to Master
       uses: s0/git-publish-subdir-action@master
       env:
         REPO: self
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: _site
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
