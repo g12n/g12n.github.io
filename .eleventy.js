@@ -1,7 +1,7 @@
 module.exports = {
     dir: {
-        input: "./_source",
-        output: "../g12n.github.io/"
+        input: "./_source"
+        
     },
     templateFormats: [
         "md",
