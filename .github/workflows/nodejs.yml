@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Master Pages
 on:
   push:	
     branches:	
@@ -6,10 +6,10 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Build and Deploy
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@source
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -20,7 +20,7 @@ jobs:
         npx @11ty/eleventy
 
     - name: Deploy
-      uses: s0/git-publish-subdir-action@master
+      uses: s0/git-publish-subdir-action@source
       env:
         REPO: self
         BRANCH: master
