@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 on:
   push:	
     branches:	
-      - master
+      - source
 
 jobs:
   deploy:
@@ -23,6 +23,6 @@ jobs:
       uses: s0/git-publish-subdir-action@master
       env:
         REPO: self
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: _site
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
