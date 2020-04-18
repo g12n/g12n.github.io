@@ -6,7 +6,9 @@ module.exports = {
     templateFormats: [
         "md",
         "css",
-        "njk"
+        "njk", 
+        "yml", 
+        "html"
     ],
     passthroughFileCopy: true
 };
