@@ -2,7 +2,9 @@ backend:
   name: git-gateway
   branch: source # Branch to update (optional; defaults to master)
   repo: g12n/g12n.github.io
-  
+
+media_folder: "/_source/images/uploads"
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
