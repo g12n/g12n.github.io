@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/g12n/g12n.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "eleventy-plugin-local-images": "^0.3.0"
   }
 }
