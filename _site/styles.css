@@ -1,0 +1,91 @@
+:root{
+    --content-max-width: 60ch;
+    --body-padding: 1rem;
+
+    --color-canvas: #123;
+    --color-surface: #234;
+    --color-text: #fff;
+}
+
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding-inline:max(calc((100vw - var(--content-max-width))/2), var(--body-padding)) ;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--color-canvas);
+    color: var(--color-text)
+}
+
+h1{
+    font-weight: 200;
+    margin: 1rem 0;
+}
+h2{
+    font-weight: 200;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1rem;;
+    font-weight: 500;
+    margin: 0;
+    margin-block-end: 0.1lh;
+}
+p{
+    margin: 0;
+    margin-block-end: 0.5lh;
+    font-size: 1rem;;
+}
+
+p:last-child{
+    margin-block-end: 0;
+}
+
+.h-card{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    color: currentColor;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+
+}
+
+.h-card img{
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+}
+
+ul[class]{
+    list-style: none;
+    padding: 0;
+}
+
+.projects li{
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    padding: 1em;
+    margin-block-end: 1em;
+    border-radius: 0.5em;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.projects li>*{
+    grid-column: 2/3;
+}
+.projects li:hover{
+    border-color: rgba(255,255,255,0.1);
+}
+.projects a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+.projects a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+}
